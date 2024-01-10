@@ -38,17 +38,10 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-    function is1500() {
-      console.log(`The list of inventors for those who were born in the 1500's: `);
-      for(let i = 0; i < inventors.length; i++){
-
-        let selected = inventors[i];
-        // console.log(selected)
-        let yearOfBirth = selected.year;
-        if(yearOfBirth > 1499 && yearOfBirth < 1600){
-          let the1500s = `${inventors[i].first} ${inventors[i].last}`
-          console.log(`${the1500s}`);
-        }
+    function is1500(inventor) {
+      let yearOfBirth = inventor.year;
+      if (yearOfBirth > 1499 && yearOfBirth < 1600) {
+        console.table(inventor);
       }
     }
 
