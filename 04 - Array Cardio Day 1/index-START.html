@@ -119,6 +119,17 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    let instances = data.reduce(function(allCars, car) {
+      if(car in allCars) {
+        allCars[car]++;
+      } else {
+        allCars[car] = 1;
+      }
+      return allCars;
+    }, {})
+
+    console.log(instances);
+
   </script>
 </body>
 </html>
